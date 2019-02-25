@@ -1,0 +1,235 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+html {
+	line-height: 1;
+}
+body {
+  line-height: inherit;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* stylelint-enable */
+
+#content {
+  /* 20px base w/ 1.333 ratio (https://www.modularscale.com/?20&px&1.333)
+      & 26px line height */
+  font-size: 1.25em; /* 20px/16px = 1.25em */
+  line-height: 1.3em; /* 26px/20px = 1.3em */
+  font-family: "Open Sans", sans-serif;
+  padding: 0 1em;
+  display: block;
+}
+
+header {
+  font-size: 2.96075em; /* 47.372px/16px = 2.96075em */
+  line-height: 1.097695em; /* 52px/47.372px = 1.097695em */
+  font-family: "Doppio One", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  padding: 0.42219em; /* 20px/47.372px = 0.42219em */
+  display: cell;
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+footer {
+  font-size: 0.93775em; /* 15.004px/16px = 0.93775em */
+  line-height: 1.732871em; /* 26px/15.004px = 1.732871em */
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  background-color: #cc0000;
+  color: #eeeeee;
+  padding: 1.25em; /* 20px / 16px = 1.25em */
+  margin-top: 1.625em; /* 26px/16px = 1.625em */
+}
+
+h2 {
+  font-size: 1.7769em; /* 35.538px/20px = 1.7769em */
+  line-height: 1.097417em; /* 39px/35.538px = 1.097417em */
+  font-family: "Doppio One", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  padding-top: 0.365806em; /* 13px/35.538px = 0.365806em */
+}
+
+article + article {
+  margin-top: 1em;
+  border-top: 2px solid;
+}
+
+h3 {
+  font-size: 1.5em; /* 30px/20px = 1.5em */
+  line-height: 1.3em; /* 39px/30px = 1.3em */
+  font-family: "Doppio One", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  padding-top: 0.433333em; /* 13px/30px = 0.433333em */
+}
+
+h2 + p {
+  padding-top: 0.325em;
+}
+
+img {
+  width: 95%;
+  padding-left: 2.5%;
+}
+
+p + p, section > p + img {
+  padding-top: 1.3em;
+}
+
+li > p {
+  font-size: 1.5em; /* 30px/20px = 1.5em */
+  line-height: 1.3em; /* 39px/30px = 1.3em */
+  font-family: "Doppio One", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 0.666667em;
+}
+
+footer a {
+  color: #dddd00;
+}
+
+a:hover {
+  color: #00dddd;
+}
+
+ol {
+  padding: 0.65em;
+}
+
+input[type="submit"] {
+  font-size: 1em;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  width: 100%;
+  padding: 0.325em 0; /* 6.5px/20px = 0.325em */
+  margin-top: 0.65em; /* 13px/20px = 0.65em */
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 530px) {
+  img {
+    width: 85%;
+    padding-left: 7.5%;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  #content {
+    padding: 0 3em;
+  }
+
+  header {
+    padding: 0.42219em 1.266571em; /* 20px/47.372px = 0.42219em; 60px/47.372px = 1.266571em */
+  }
+
+  footer {
+    padding: 1.25em 3.75em; /* 20px / 16px = 1.25em */
+  }
+}
+
+@media screen and (min-width: 910px) {
+  img {
+    width: 80%;
+    padding-left: 10%;
+  }
+}
+
+@media screen and (min-width: 994px) {
+  #content {
+    padding: 0 6em;
+  }
+
+  header {
+    padding: 0.42219em 2.533142em; /* 20px/47.372px = 0.42219em; 120px/47.372px = 2.533142em */
+  }
+
+  footer {
+    padding: 1.25em 7.5em; /* 20px / 16px = 1.25em */
+  }
+}
+
+@media screen and (min-width: 1094px) {
+  #header {
+    padding: 0.42219em 5.066283em; /* 20px/47.372px = 0.42219em; 240px/47.372px = 2.533142em */
+  }
+
+  #about {
+    padding: 0 6em;
+  }
+
+  #events > h2 {
+    padding: 0.365806em 3.376667em 0;
+  }
+
+  #events > p {
+    padding: 0 6em;
+  }
+
+  #recruiting {
+    padding: 0 6em;
+  }
+
+  #footer {
+    padding: 1.25em 15em;
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  /* TODO: Flexbox for 2-col design */
+
+  #events ul {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+  }
+
+  #events li {
+    width: 47.596154%;
+    padding-left: 1.602564%;
+  }
+}
