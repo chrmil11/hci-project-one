@@ -60,6 +60,10 @@ h3 {
   padding-top: 0.433333em; /* 13px/30px = 0.433333em */
 }
 
+form {
+  padding-top: 0.65em;
+}
+
 img {
   width: 95%;
   padding-left: 2.5%;
