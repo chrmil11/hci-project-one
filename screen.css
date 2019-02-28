@@ -123,11 +123,11 @@ article + article {
     padding: 0 3em;
   }
 
-  header {
+  #header {
     padding: 0.42219em 1.266571em; /* 20px/47.372px = 0.42219em; 60px/47.372px = 1.266571em */
   }
 
-  footer {
+  #footer {
     padding: 1.25em 3.75em; /* 20px / 16px = 1.25em */
   }
 }
@@ -144,38 +144,26 @@ article + article {
     padding: 0 6em;
   }
 
-  header {
+  #header {
     padding: 0.42219em 2.533142em; /* 20px/47.372px = 0.42219em; 120px/47.372px = 2.533142em */
   }
 
-  footer {
-    padding: 1.25em 7.5em; /* 20px / 16px = 1.25em */
+  #footer {
+    padding: 1.25em 7.5em; /* 20px/16px = 1.25em; 120px/16px = 7.5em */
   }
 }
 
 @media screen and (min-width: 1094px) {
   #header {
-    padding: 0.42219em 5.066283em; /* 20px/47.372px = 0.42219em; 240px/47.372px = 2.533142em */
+    padding: 0.42219em 3.799713em; /* 20px/47.372px = 0.42219em; 180px/47.372px = 3.799713em */
   }
 
-  #about {
-    padding: 0 6em;
-  }
-
-  #events > h2 {
-    padding: 0.365806em 3.376667em 0;
-  }
-
-  #events > p {
-    padding: 0 6em;
-  }
-
-  #recruiting {
-    padding: 0 6em;
+  #content {
+    padding: 0 9em;
   }
 
   #footer {
-    padding: 1.25em 15em;
+    padding: 1.25em 11.25em; /* 20px/16px = 1.25em; 180px/16px = 11.25em */
   }
 }
 
