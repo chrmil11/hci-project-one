@@ -270,6 +270,7 @@ article + article {
   #recruiting h2 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    align-self: flex-end;
   }
 
   #recruiting p {
@@ -280,6 +281,7 @@ article + article {
   #recruiting #interestlist {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    padding: 0.65em 1.3em 0;
   }
 
   #recruiting img {
