@@ -127,6 +127,12 @@ a:hover {
   color: #00dddd;
 }
 
+#content a {
+  padding-top: 0.65em;
+  display: block;
+  text-align: center;
+}
+
 /* Layout Rules */
 h2 + p {
   padding-top: 0.325em;
