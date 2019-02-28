@@ -83,21 +83,22 @@
       }
 
       // Display error message for invalid name
-      if (!validate_name(name_value)) {
-        console.log('Invalid name');
-        name_error.innerText = 'Check if you\'re using any numbers or special characters.';
-      } else {
+      if (name_value.length === 0 || validate_name(name_value)) {
         console.log('Valid name');
         name_error.innerText = '';
+      } else {  // Only display if neither an empty input or a valid name
+        console.log('Invalid name');
+        name_error.innerText = 'Check if you\'re using any numbers or special characters.';
       }
 
       // Display error message for invalid email
-      if (!validate_email(email_value)) {
-        console.log('Invalid email');
-        email_error.innerText = 'Enter a valid email address';
-      } else {
+      if (email_value.length === 0 || validate_email(email_value)) {
+      // if (!validate_email(email_value)) {
         console.log('Valid email');
         email_error.innerText = '';
+      } else {  // Only display if neither an empty input or a valid email
+        console.log('Invalid email');
+        email_error.innerText = 'Enter a valid email address';
       }
     });
   });
