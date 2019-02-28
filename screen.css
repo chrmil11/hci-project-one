@@ -179,9 +179,30 @@ article + article {
   }
 }
 
-@media screen and (min-width: 1248px) {
-  /* TODO: Flexbox for 2-col design */
+@media screen and (min-width: 1190px) {
+  #header {
+    padding: 0.42219em 5.066284em; /* 20px/47.372px = 0.42219em; 240px/47.372px = 5.066284em */
+  }
 
+  #recruiting, #about {
+    padding: 0 3em;
+  }
+
+  #events h2 {
+    padding-left: 1.688334em; /* 60px/35.538px = 1.688334em */
+  }
+
+  #events > p {
+    padding-left: 3em;
+  }
+
+  #footer {
+    padding: 1.25em 15em; /* 20px/16px = 1.25em; 240px/16px = 15em */
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  /* 2-col for events */
   #events ul {
     display: flex;
     flex-flow: row wrap;
@@ -202,6 +223,7 @@ article + article {
     display: grid;
     grid-template-columns: 47.596154% 47.596154%;
     grid-column-gap: 1.602564%;
+    padding: 0;
   }
 
   #recruiting h2 {
