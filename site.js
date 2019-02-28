@@ -7,6 +7,29 @@
     return;
   }
 
+  // Value cleaning functions
+  function clean_name(value) {
+    // For names, only remove whitespace from sides and if there are multiple space inside text (ie: '  a  d    s ' -> 'a d s')
+    value = value.replace(/^ +/g, '');
+    value = value.replace(/ +$/g, '');
+    return value.replace(/  +/g, ' ');
+  }
+
+  // Validation functions
+  // General validation check
+  function validate(value, regex) {
+    if (typeof(regex.test) === 'function') {  // Check if valid regex
+      // If true, use regex to test the value
+      return regex.test(value);
+    } else {
+      return false;
+    }
+  }
+
+  function validate_name(value) {
+    return validate(clean_name(value), /.+( .+)*/g);
+  }
+
   // Event Listeners
   // When DOM is loaded, disable submit
   document.addEventListener('DOMContentLoaded', function() {
@@ -25,7 +48,7 @@
       console.log('keyup');
 
       // Check if both fields are valid
-      if (name_value !== '' && email_value !== '') {
+      if (validate_name(name_value) && email_value !== '') {
         // Enable the submit button
         if (interest_submit.hasAttribute('disabled')) {
           interest_submit.removeAttribute('disabled');
