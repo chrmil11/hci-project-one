@@ -39,7 +39,9 @@
   function validate_email(value) {
     // For a valid email, check if it's in a email-looking format
     // Works even for our school emails (@hawk.iit.edu)
-    return validate(clean_email(value), /^\w+@\w+(\.\w+)+$/g);
+    // Only considered special characters are '-' and '_'.
+    // TODO: Internationalized email addresses? How would we approach this? (see: https://stackoverflow.com/a/2071250)
+    return validate(clean_email(value), /^[\w-]+@[\w-]+(\.[\w-]+)+$/g);
   }
 
   // Event Listeners
