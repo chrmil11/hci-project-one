@@ -2,9 +2,13 @@
 
 (function () {
   // Browser check
+  if (!('querySelector' in document && 'addEventListener' in document)) {
+    return;
+  }
 
   // Event Listeners
   // When DOM is loaded, disable submit
+
 
   // Interactive flair for the form
 
