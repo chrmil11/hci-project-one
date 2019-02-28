@@ -31,10 +31,14 @@
   }
 
   function validate_name(value) {
+    // For now, a valid name contains only letters and maybe hyphens
+    // TODO: In the future, what about characters from other languages? How would we be able to distinctify that?
     return validate(clean_name(value), /^[a-zA-Z-]+( [a-zA-Z-]+)*$/g);
   }
 
   function validate_email(value) {
+    // For a valid email, check if it's in a email-looking format
+    // Works even for our school emails (@hawk.iit.edu)
     return validate(clean_email(value), /^\w+@\w+(\.\w+)+$/g);
   }
 
