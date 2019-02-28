@@ -196,4 +196,32 @@ article + article {
     width: 90%;
     padding-left: 5%;
   }
+
+  /* 2-col for form */
+  #recruiting {
+    display: grid;
+    grid-template-columns: 47.596154% 47.596154%;
+    grid-column-gap: 1.602564%;
+  }
+
+  #recruiting h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  #recruiting p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #recruiting #interestlist {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  #recruiting img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    align-self: center;
+  }
 }
