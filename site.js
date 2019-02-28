@@ -15,6 +15,10 @@
     return value.replace(/  +/g, ' ');
   }
 
+  function clean_email(value) {
+    return value.replace(/ +/g, '');
+  }
+
   // Validation functions
   // General validation check
   function validate(value, regex) {
@@ -28,6 +32,10 @@
 
   function validate_name(value) {
     return validate(clean_name(value), /.+( .+)*/g);
+  }
+
+  function validate_email(value) {
+    return validate(clean_email(value), /^\w+@\w+(\.\w+)+$/g);
   }
 
   // Event Listeners
@@ -48,7 +56,7 @@
       console.log('keyup');
 
       // Check if both fields are valid
-      if (validate_name(name_value) && email_value !== '') {
+      if (validate_name(name_value) && validate_email(email_value)) {
         // Enable the submit button
         if (interest_submit.hasAttribute('disabled')) {
           interest_submit.removeAttribute('disabled');
