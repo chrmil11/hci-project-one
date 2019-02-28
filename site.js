@@ -103,5 +103,13 @@
         email_error.innerText = 'Enter a valid email address';
       }
     });
+
+    // Listener to detect when form is submitted
+    interest_form.addEventListener('signup', function() {
+      // TODO: Figure out how to set up an alert/event to notify the user that their form has been submitted.
+      alert("You have successfully signed up!");
+      // TODO: Set up some sort of database to store form input
+      // TODO: Find out how to prevent adding all the input arguments to the URL
+    });
   });
 }());
