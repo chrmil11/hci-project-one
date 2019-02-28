@@ -93,7 +93,7 @@ h2 + p {
   padding-top: 0.325em;
 }
 
-p + p, section > p + img {
+p + p, form + img, section > p + img {
   padding-top: 1.3em;
 }
 
