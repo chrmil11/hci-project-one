@@ -76,10 +76,10 @@ input {
   width: 98%;
 }
 
-.hint {
+.error {
   display: inline-block;
   font-size: 0.8em; /* 16px/20px = 0.8em */
-  line-height: inherit;
+  line-height: 1.5em; /* 24px/16px = 1.5em */
   font-family: "Open Sans", sans-serif;
   text-align: left;
   text-transform: none;
