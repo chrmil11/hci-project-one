@@ -7,6 +7,8 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 /* stylelint-enable */
 
+/* Base rules */
+
 #content {
   /* 20px base w/ 1.333 ratio (https://www.modularscale.com/?20&px&1.333)
       & 26px line height */
@@ -24,7 +26,7 @@ header {
   text-transform: uppercase;
   font-style: italic;
   padding: 0.42219em; /* 20px/47.372px = 0.42219em */
-  display: cell;
+  display: block;
   background-color: #cc0000;
   color: #ffffff;
 }
@@ -49,11 +51,6 @@ h2 {
   padding-top: 0.365806em; /* 13px/35.538px = 0.365806em */
 }
 
-article + article {
-  margin-top: 1em;
-  border-top: 2px solid;
-}
-
 h3 {
   font-size: 1.5em; /* 30px/20px = 1.5em */
   line-height: 1.3em; /* 39px/30px = 1.3em */
@@ -63,26 +60,9 @@ h3 {
   padding-top: 0.433333em; /* 13px/30px = 0.433333em */
 }
 
-h2 + p {
-  padding-top: 0.325em;
-}
-
 img {
   width: 95%;
   padding-left: 2.5%;
-}
-
-p + p, section > p + img {
-  padding-top: 1.3em;
-}
-
-li > p {
-  font-size: 1.5em; /* 30px/20px = 1.5em */
-  line-height: 1.3em; /* 39px/30px = 1.3em */
-  font-family: "Doppio One", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 0.666667em;
 }
 
 footer a {
@@ -99,7 +79,6 @@ ol {
 
 input[type="submit"] {
   font-size: 1em;
-  -webkit-border-radius: 0;
   border-radius: 0;
   width: 100%;
   padding: 0.325em 0; /* 6.5px/20px = 0.325em */
@@ -108,6 +87,30 @@ input[type="submit"] {
   color: #ffffff;
 }
 
+/* Layout Rules */
+h2 + p {
+  padding-top: 0.325em;
+}
+
+p + p, section > p + img {
+  padding-top: 1.3em;
+}
+
+li > p {
+  font-size: 1.5em; /* 30px/20px = 1.5em */
+  line-height: 1.3em; /* 39px/30px = 1.3em */
+  font-family: "Doppio One", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 0.666667em;
+}
+
+article + article {
+  margin-top: 1em;
+  border-top: 2px solid;
+}
+
+/* State Rules */
 @media screen and (min-width: 530px) {
   img {
     width: 85%;
@@ -181,7 +184,7 @@ input[type="submit"] {
 
   #events ul {
     display: flex;
-    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 
   #events li {
