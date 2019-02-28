@@ -9,6 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Base rules */
 
+/* Overarching sections */
 #content {
   /* 20px base w/ 1.333 ratio (https://www.modularscale.com/?20&px&1.333)
       & 26px line height */
@@ -42,6 +43,7 @@ footer {
   margin-top: 1.625em; /* 26px/16px = 1.625em */
 }
 
+/* Headings */
 h2 {
   font-size: 1.7769em; /* 35.538px/20px = 1.7769em */
   line-height: 1.097417em; /* 39px/35.538px = 1.097417em */
@@ -60,21 +62,9 @@ h3 {
   padding-top: 0.433333em; /* 13px/30px = 0.433333em */
 }
 
+/* Forms */
 form {
   padding-top: 0.65em;
-}
-
-img {
-  width: 95%;
-  padding-left: 2.5%;
-}
-
-footer a {
-  color: #dddd00;
-}
-
-a:hover {
-  color: #00dddd;
 }
 
 label, input {
@@ -90,6 +80,21 @@ input[type="submit"] {
   margin-top: 0.65em; /* 13px/20px = 0.65em */
   background-color: #cc0000;
   color: #ffffff;
+}
+
+/* Images */
+img {
+  width: 95%;
+  padding-left: 2.5%;
+}
+
+/* Links */
+footer a {
+  color: #dddd00;
+}
+
+a:hover {
+  color: #00dddd;
 }
 
 /* Layout Rules */
