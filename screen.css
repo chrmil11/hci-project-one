@@ -20,7 +20,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   display: block;
 }
 
-header {
+#header {
   font-size: 2.96075em; /* 47.372px/16px = 2.96075em */
   line-height: 1.097695em; /* 52px/47.372px = 1.097695em */
   font-family: "Doppio One", sans-serif;
@@ -32,7 +32,7 @@ header {
   color: #ffffff;
 }
 
-footer {
+#footer {
   font-size: 0.93775em; /* 15.004px/16px = 0.93775em */
   line-height: 1.732871em; /* 26px/15.004px = 1.732871em */
   font-family: "Open Sans", sans-serif;
@@ -119,12 +119,12 @@ img {
 }
 
 /* Links */
-footer a {
-  color: #dddd00;
-}
-
 a:hover {
   color: #00dddd;
+}
+
+#footer a {
+  color: #dddd00;
 }
 
 #content a {
@@ -238,7 +238,7 @@ article + article {
   }
 
   #footer {
-    padding: 1.25em 15em; /* 20px/16px = 1.25em; 240px/16px = 15em */
+    padding: 1.25em 16em; /* 20px/16px = 1.25em; 256px/16px = 16em */
   }
 }
 
