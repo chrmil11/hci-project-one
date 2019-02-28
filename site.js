@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // Added b/c of linter. However, validator says to put it inside the function. What's the purpose of this?
 
 (function () {
   var interest_submit = document.querySelector('#signup');
