@@ -48,7 +48,7 @@
     var name_label = document.querySelector('#name-label');
     var email_label = document.querySelector('#email-label');
     name_label.innerHTML += ' <b class="error"></b>';
-    email_label.innerHTML += ' <b class="error"></b>'; // Enter your email address where we can contact you.
+    email_label.innerHTML += ' <b class="error"></b>';
 
     console.log('DOM loaded');
     // Disable submit button
@@ -60,7 +60,7 @@
       var name_value = contact_name.value;
       var email_value = contact_email.value;
       var name_error = document.querySelector('#name-label .error');
-      // var email_error = document.querySelector('#email-label .error');
+      var email_error = document.querySelector('#email-label .error');
       console.log('keyup');
 
       // Check if both fields are valid
@@ -81,14 +81,20 @@
       // Display error message for invalid name
       if (!validate_name(name_value)) {
         console.log('Invalid name');
-        name_error.innerText = 'Enter your name using only letters.';
+        name_error.innerText = 'Check if you\'re using any numbers or special characters.';
       } else {
         console.log('Valid name');
         name_error.innerText = '';
       }
 
       // Display error message for invalid email
-
+      if (!validate_email(email_value)) {
+        console.log('Invalid email');
+        email_error.innerText = 'Enter a valid email address';
+      } else {
+        console.log('Valid email');
+        email_error.innerText = '';
+      }
     });
   });
 }());
