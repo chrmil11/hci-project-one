@@ -31,7 +31,7 @@
   }
 
   function validate_name(value) {
-    return validate(clean_name(value), /.+( .+)*/g);
+    return validate(clean_name(value), /^[a-zA-Z-]+( [a-zA-Z-]+)*$/g);
   }
 
   function validate_email(value) {
@@ -45,25 +45,32 @@
     var interest_submit = document.querySelector('#signup');
     var contact_name = document.querySelector('#name');
     var contact_email = document.querySelector('#email');
+    var name_label = document.querySelector('#name-label');
+    var email_label = document.querySelector('#email-label');
+    name_label.innerHTML += ' <b class="error"></b>';
+    email_label.innerHTML += ' <b class="error"></b>'; // Enter your email address where we can contact you.
 
     console.log('DOM loaded');
+    // Disable submit button
     interest_submit.setAttribute('disabled', 'disabled');
     console.log('Submit button disabled');
 
+    // Set up listener for any changes in the form using keyup
     interest_form.addEventListener('keyup', function() {
       var name_value = contact_name.value;
       var email_value = contact_email.value;
+      var name_error = document.querySelector('#name-label .error');
+      // var email_error = document.querySelector('#email-label .error');
       console.log('keyup');
 
       // Check if both fields are valid
       if (validate_name(name_value) && validate_email(email_value)) {
-        // Enable the submit button
+        // Enable the submit button with valid name and email
         if (interest_submit.hasAttribute('disabled')) {
           interest_submit.removeAttribute('disabled');
           console.log('Submit button enabled');
         }
-      }
-      else {
+      } else {
         // Else, keep the submit button disabled
         if (!interest_submit.hasAttribute('disabled')) {
           interest_submit.setAttribute('disabled', 'disabled');
@@ -71,8 +78,17 @@
         }
       }
 
+      // Display error message for invalid name
+      if (!validate_name(name_value)) {
+        console.log('Invalid name');
+        name_error.innerText = 'Enter your name using only letters.';
+      } else {
+        console.log('Valid name');
+        name_error.innerText = '';
+      }
+
+      // Display error message for invalid email
+
     });
   });
-
-  // Interactive flair for the form
 }());
