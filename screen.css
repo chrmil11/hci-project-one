@@ -73,8 +73,9 @@ a:hover {
   color: #00dddd;
 }
 
-ol {
-  padding: 0.65em;
+label, input {
+  display: block;
+  width: 97.5%;
 }
 
 input[type="submit"] {
