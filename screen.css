@@ -67,8 +67,25 @@ form {
   padding-top: 0.65em;
 }
 
-label, input {
+label {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+
+input {
   width: 98%;
+}
+
+.hint {
+  display: inline-block;
+  font-size: 0.8em; /* 16px/20px = 0.8em */
+  line-height: inherit;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  text-transform: none;
+  font-style: italic;
+  padding-top: 0;
+  color: #f00;
 }
 
 input[type="text"], input[type="email"] {
@@ -86,8 +103,8 @@ input[type="submit"] {
   width: 100%;
   padding: 0.325em 0; /* 6.5px/20px = 0.325em */
   margin-top: 0.65em; /* 13px/20px = 0.65em */
-  background-color: #cc0000;
-  color: #ffffff;
+  background-color: #c00;
+  color: #fff;
 }
 
 input[type="submit"]:disabled {
@@ -119,7 +136,7 @@ p + p, form + img, section > p + img {
   padding-top: 1.3em;
 }
 
-li > p {
+#events li > p {
   font-size: 1.5em; /* 30px/20px = 1.5em */
   line-height: 1.3em; /* 39px/30px = 1.3em */
   font-family: "Doppio One", sans-serif;
